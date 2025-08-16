@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Cisternas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Página inicial -->
+  <div class="container" id="tela-formulario">
+    <h1>💧 Guia de Cisternas</h1>
+    <p class="intro">
+      Descubra qual o tamanho ideal da sua cisterna para aproveitar melhor a água da chuva.<br>
+      Preencha os dados abaixo e veja os resultados com gráficos e estimativas de economia.
+    </p>
+
+    <div class="form-group">
+      <label for="area">Área de Captação (m²)</label>
+      <input type="number" id="area" placeholder="Digite a área do seu telhado">
+    </div>
+
+    <div class="form-group">
+      <label for="consumo">Consumo Mensal (m³)</label>
+      <input type="number" id="consumo" placeholder="Digite o consumo de água mensal">
+    </div>
+
+    <div class="form-group">
+      <label for="coeficiente">Coeficiente de Captação</label>
+      <select id="coeficiente">
+        <option value="0.8" selected>Telhado Padrão (0.8)</option>
+        <option value="0.9">Telhado Ideal (0.9)</option>
+        <option value="0.7">Telhado com Perdas (0.7)</option>
+      </select>
+    </div>
+
+    <button onclick="mostrarResultados()">Calcular</button>
+    <button onclick="preencherExemplo()">Exemplo de cálculo</button>
+  </div>
+
+  <!-- Resultados -->
+  <div class="container hidden" id="tela-resultados">
+    <h1>Resultados da Cisterna</h1>
+    <div class="results">
+      <div class="result-card"><span class="result-title">📦 Volume Necessário: </span><span id="volume-necessario">0</span> m³</div>
+      <div class="result-card"><span class="result-title">✅ Volume Recomendado: </span><span id="volume-recomendado">0</span> m³</div>
+      <div class="result-card"><span class="result-title">💰 Custo Estimado: </span>R$ <span id="custo">0</span></div>
+      <div class="result-card"><span class="result-title">💧 Economia Anual: </span>R$ <span id="economia">0</span></div>
+    </div>
+
+    <h2>📊 Gráfico do Saldo Mensal</h2>
+    <canvas id="graficoCisterna" height="120"></canvas>
+
+    <h2>📅 Detalhamento Mensal</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Mês</th>
+            <th>Chuva (mm)</th>
+            <th>Volume Captado (m³)</th>
+            <th>Produção Acumulada (m³)</th>
+            <th>Saldo (m³)</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-resultados"></tbody>
+      </table>
+    </div>
+
+    <button onclick="voltar()">Voltar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
