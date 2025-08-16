@@ -8,7 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <!-- Página inicial -->
+
   <div class="container" id="tela-formulario">
     <h1>Guia de Cisternas</h1>
     <p class="intro">
@@ -39,7 +39,6 @@
     <button onclick="preencherExemplo()">Exemplo de cálculo</button>
   </div>
 
-  <!-- Resultados -->
   <div class="container hidden" id="tela-resultados">
     <h1>Resultados da Cisterna</h1>
     <div class="results">
@@ -49,10 +48,10 @@
       <div class="result-card"><span class="result-title">Economia Anual: </span>R$ <span id="economia">0</span></div>
     </div>
 
-    <h2>📊 Gráfico do Saldo Mensal</h2>
+    <h2>Gráfico do Saldo Mensal</h2>
     <canvas id="graficoCisterna" height="120"></canvas>
 
-    <h2>📅 Detalhamento Mensal</h2>
+    <h2>Detalhamento Mensal</h2>
     <div class="table-wrapper">
       <table>
         <thead>

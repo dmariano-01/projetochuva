@@ -1,3 +1,7 @@
+//media de chuvas de icapuí - ce
+//se esse projeto for pra frente, eu vou ter que colocar mais cidades
+//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
 const mediasChuva = [
       { mes: "Janeiro", chuva: 98.56 },
       { mes: "Fevereiro", chuva: 122.12 },
@@ -56,6 +60,9 @@ const mediasChuva = [
           </tr>`;
       });
 
+//agora eu vou tentar adaptar o calculo
+//seja o que Deus quiser
+
       document.getElementById('tabela-resultados').innerHTML = tabelaHTML;
 
       let volumeNecessario = menorSaldo < 0 ? Math.abs(menorSaldo) : maiorSaldo;
@@ -69,7 +76,8 @@ const mediasChuva = [
       document.getElementById('economia').textContent = economiaAnual.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
 
       if (grafico) grafico.destroy();
-
+      
+//equação maquiavélica
       const ctx = document.getElementById('graficoCisterna').getContext('2d');
       grafico = new Chart(ctx, {
         type: 'line',
@@ -101,3 +109,5 @@ const mediasChuva = [
       document.getElementById('consumo').value = 180;
       document.getElementById('coeficiente').value = 0.8;
     }
+
+    //funciona pfv

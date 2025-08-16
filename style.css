@@ -112,7 +112,7 @@ tr:nth-child(even) { background: #f9f9f9; }
 
 .hidden { display: none; }
 
-/* 📱 Estilo para tablets */
+/* tablets */
 @media (max-width: 1024px) and (min-width: 600px) {
   .container {
     padding: 20px;
@@ -135,7 +135,7 @@ tr:nth-child(even) { background: #f9f9f9; }
   }
 }
 
-/* 📱 Ajustes extras para telas menores (smartphones) */
+/* ajuste para o celular */
 @media (max-width: 600px) {
   .container {
     padding: 15px;
