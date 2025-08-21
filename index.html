@@ -51,6 +51,33 @@
     <h2>Gráfico do Saldo Mensal</h2>
     <canvas id="graficoCisterna" height="120"></canvas>
 
+<!-- botao do modal  -->
+<button id="btnExplicacao" class="explicacao-btn">📘 Entenda o cálculo</button>
+
+<!-- modal em si -->
+<div id="modalExplicacao" class="modal">
+  <div class="modal-box">
+    <span class="fechar">&times;</span>
+    <h2>Como o cálculo é feito</h2>
+    <p>
+      O cálculo do volume de água da cisterna considera três fatores principais:
+    </p>
+    <ul>
+      <li>Área do Telhado (m²)</li>
+      <li>Índice Pluviométrico Médio (mm/mês)</li>
+      <li>Coeficiente de Aproveitamento (eficiência, no projeto 0,8)</li>
+    </ul>
+    <p class="formula">
+      <b>Fórmula:</b><br>
+      <span>Volume = Área × Chuva × Coeficiente</span>
+    </p>
+    <p class="resumo">
+      Esse valor indica a <b>quantidade estimada de água da chuva</b> que pode ser captada e armazenada na cisterna.
+    </p>
+  </div>
+</div>
+
+
     <h2>Detalhamento Mensal</h2>
     <div class="table-wrapper">
       <table>

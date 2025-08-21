@@ -111,3 +111,25 @@ const mediasChuva = [
     }
 
     //funciona pfv
+
+    // modal maneiral
+const modal = document.getElementById("modalExplicacao");
+const btn = document.getElementById("btnExplicacao");
+const span = document.querySelector(".fechar");
+
+// abre
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// fecha no X
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// fecha clicando fora
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
